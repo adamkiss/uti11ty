@@ -1,4 +1,3 @@
-const stripIndent = require('strip-indent')
 const markdownIt = require('markdown-it')
 
 const options = {
@@ -12,9 +11,9 @@ const options = {
 	markdownDisableCode: true
 }
 
-const si = text => stripIndent(text)
-const md = (renderer, content) => renderer.render(si(content))
-const mdi = (renderer, content) => renderer.renderInline(si(content))
+const trim = text => text => text.split("\n").map(line => line.trimStart()).join("\n")
+const md = (renderer, content) => renderer.render(trim(content))
+const mdi = (renderer, content) => renderer.renderInline(trim(content))
 
 module.exports = (ec, opts = {}) => {
 	Object.assign(options, opts)
