@@ -1,7 +1,7 @@
 const date = require('./src/date')
 
 const functions = {
-	toDate: date.dateFrom,
+	parseDate: date.dateFrom,
 	slugify: require('./src/slugify')
 }
 
