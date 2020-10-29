@@ -10,6 +10,9 @@
   "author": "Adam Kiss",
   "license": "ISC",
   "dependencies": {
-    "diacritics": "^1.3.0"
+    "diacritics": "^1.3.0",
+    "luxon": "^1.25.0",
+    "markdown-it": "^12.0.2",
+    "markdown-it-attrs": "^3.0.3"
   }
 }
