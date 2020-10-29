@@ -1,6 +1,6 @@
 {
   "name": "uti11ty",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Utility belt for my usage of eleventy",
   "repository": "github:adamkiss/uti11ty",
   "main": "index.js",
