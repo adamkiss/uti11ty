@@ -11,7 +11,7 @@ const options = {
 	markdownDisableCode: true
 }
 
-const trim = text => text => text.split("\n").map(line => line.trimStart()).join("\n")
+const trim = text => text.split("\n").map(line => line.trimStart()).join("\n")
 const md = (renderer, content) => renderer.render(trim(content))
 const mdi = (renderer, content) => renderer.renderInline(trim(content))
 
