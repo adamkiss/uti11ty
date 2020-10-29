@@ -20,7 +20,7 @@ module.exports = (ec, opts = {}) => {
 	Object.assign(options, opts)
 
 	const markdown = markdownIt(options.markdownOptions)
-	markdownPlugins.forEach(plugin => markdown.use(plugin))
+	options.markdownPlugins.forEach(plugin => markdown.use(plugin))
 	if (options.markdownDisableCode) markdown.disable('code')
 
 	ec.addFilter('md', value => md(markdown, value))
