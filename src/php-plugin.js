@@ -31,4 +31,8 @@ module.exports = (ec, opts) => {
 
 		return content
 	})
+
+	ec.addFilter('php', value => `<php>${value}</php>`)
+	ec.addShortcode('echo', (...args) => args.map(a => `<echo>${a}</echo>`).join(''))
+	ec.addPairedShortcode('php', content => `<php>${content}</php>`)
 }
